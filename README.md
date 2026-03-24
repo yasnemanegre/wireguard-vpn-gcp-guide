@@ -17,3 +17,10 @@ Initialize	Cochez "Add a README file"
 .gitignore	Sélectionnez "None" (ou "Linux" si vous voulez)
 License	Sélectionnez "MIT License" (recommandé pour ce type de guide)
 Cliquez sur "Create repository"
+
+
+## Utilisation
+
+### Installation automatique
+```bash
+bash <(curl -s https://raw.githubusercontent.com/yasnemanegre/wireguard-vpn-gcp-guide/main/install.sh)
