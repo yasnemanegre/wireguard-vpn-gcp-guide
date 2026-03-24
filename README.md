@@ -1,26 +1,35 @@
-# wireguard-vpn-gcp-guide
-Guide complet pour créer son propre serveur VPN WireGuard sur Google Cloud
+# 🛡️ WireGuard VPN sur Google Cloud
 
-Déploiement sur GitHub
-1. Créer un nouveau dépôt
-Connectez-vous à github.com
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/platform-GCP-blue.svg)](https://cloud.google.com)
+[![WireGuard](https://img.shields.io/badge/WireGuard-0.5.3-green.svg)](https://www.wireguard.com)
 
-Cliquez sur le "+" en haut à droite → "New repository"
+## 📖 À propos
 
-Remplissez :
+Ce projet vous permet de déployer votre propre serveur VPN personnel sur **Google Cloud Platform** en utilisant **WireGuard**. 
+Profitez de l'offre **Always Free** de GCP pour un VPN gratuit, sécurisé et performant.
 
-Champ	Valeur
-Repository name	wireguard-vpn-gcp-guide
-Description	Guide complet pour créer son propre serveur VPN WireGuard sur Google Cloud
-Public/Private	Public (pour que tout le monde puisse l'utiliser)
-Initialize	Cochez "Add a README file"
-.gitignore	Sélectionnez "None" (ou "Linux" si vous voulez)
-License	Sélectionnez "MIT License" (recommandé pour ce type de guide)
-Cliquez sur "Create repository"
+## ✨ Fonctionnalités
 
+- 🔒 **Sécurisé** : Chiffrement moderne (WireGuard)
+- 🚀 **Performant** : Latence minimale et débits élevés
+- 💰 **Gratuit** : Fonctionne avec l'offre Always Free de GCP
+- 📱 **Multi-plateforme** : Compatible avec tous les appareils
+- 🛠️ **Facile à configurer** : Scripts automatisés
 
-## Utilisation
+## 📋 Prérequis
 
-### Installation automatique
+- Un compte [Google Cloud Platform](https://cloud.google.com)
+- Des connaissances de base en ligne de commande
+- Un appareil client (téléphone, ordinateur, tablette)
+
+## 🚀 Installation rapide
+
+### 1. Créer une VM sur GCP
+
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/yasnemanegre/wireguard-vpn-gcp-guide/main/install.sh)
+gcloud compute instances create vpn-server \
+    --machine-type=e2-micro \
+    --image-family=ubuntu-2204-lts \
+    --image-project=ubuntu-os-cloud \
+    --tags=wireguard
